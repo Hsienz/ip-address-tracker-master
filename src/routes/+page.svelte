@@ -70,9 +70,7 @@
 			<Card title="ISP" content={display.isp} />
 		</div>
 	</div>
-	{#if browser}
 	<div class="absolute top-1/3 -z-20 w-full h-2/3 min-h-[500px]">
 		<Leaflet latLng={[display.location.lat, display.location.lng]} />
 	</div>
-	{/if}
 </div>
