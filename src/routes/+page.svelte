@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Card from "./Card.svelte";
-	import { tracker } from "./store";
 	import type { ActionData } from "./$types";
 	import iconArrow from "$lib/images/icon-arrow.svg";
 	import Leaflet from "./Leaflet.svelte";

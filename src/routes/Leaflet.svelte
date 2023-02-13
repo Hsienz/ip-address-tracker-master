@@ -31,7 +31,7 @@
 		map = map?.setView(latLng);
 		if (map) marker = L.marker(latLng, { icon: markerIcon }).addTo(map);
 	};
-	$: if (latLng) changeMarker();
+	$: if (map && latLng) changeMarker();
 </script>
 
 <div id="map" class="w-full h-full" />
