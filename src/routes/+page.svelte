@@ -4,6 +4,7 @@
 	import iconArrow from "$lib/images/icon-arrow.svg";
 	import Leaflet from "./Leaflet.svelte";
 	import Separator from "./Separator.svelte";
+	import { browser } from "$app/environment";
 	export let form: ActionData;
 	let display: any = {
 		ip: "192.212.174.101",
@@ -69,7 +70,9 @@
 			<Card title="ISP" content={display.isp} />
 		</div>
 	</div>
+	{#if browser}
 	<div class="absolute top-1/3 -z-20 w-full h-2/3 min-h-[500px]">
 		<Leaflet latLng={[display.location.lat, display.location.lng]} />
 	</div>
+	{/if}
 </div>
