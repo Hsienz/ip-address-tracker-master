@@ -39,7 +39,7 @@
 		<form
 			method="POST"
 			action="/"
-			class="w-[90vw] xl:w-[40vw] h-16 xl:h-14 rounded-2xl overflow-hidden relative top-6 -mb-24 xl:-mb-9 max-w-[450px] xl:max-w-none"
+			class="w-[90vw] xl:w-[40vw] h-16 xl:h-14 rounded-2xl overflow-hidden relative top-6 xl:-mb-9 max-w-[450px] xl:max-w-none"
 		>
 			<input
 				type="text"
@@ -56,7 +56,7 @@
 		</form>
 
 		<div
-			class="justify-self-end translate-y-1/2 grid gap-y-2 grid-rows-[7] xl:grid-cols-7 bg-white p-8 w-[90vw] xl:w-[75vw] text-center xl:text-left h-96 xl:h-48 xl:justify-between max-w-[450px] xl:max-w-none rounded-2xl relative"
+			class="justify-self-end translate-y-1/2 grid grid-rows-[7] xl:grid-cols-7 bg-white gap-y-2 p-6 w-[90vw] xl:w-[75vw] text-center xl:text-left h-auto xl:h-48 xl:justify-between max-w-[450px] xl:max-w-none rounded-2xl absolute bottom-0"
 		>
 			<Card title="IP ADDRESS" content={display.ip} />
 			<Separator />
