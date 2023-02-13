@@ -1,13 +1,14 @@
 <script lang="ts">
-	import L from "leaflet";
 	import "leaflet/dist/leaflet.css";
 	import { onDestroy, onMount } from "svelte";
 	import iconLocation from "$lib/images/icon-location.svg";
-	let map: L.Map;
-	let marker: L.Marker;
+	let map: any;
+	let marker: any;
 	export let latLng: [number, number] = [0, 0];
-    let markerIcon: L.Icon
-	onMount(() => {
+    let markerIcon: any
+	let L:any
+	onMount(async () => {
+		L = await import ('leaflet')
 		markerIcon = L.icon({
 			iconUrl: iconLocation,
 		});
@@ -31,7 +32,7 @@
 		map = map?.setView(latLng);
 		if (map) marker = L.marker(latLng, { icon: markerIcon }).addTo(map);
 	};
-	$: if (map && latLng) changeMarker();
+	$: if (L && latLng) changeMarker();
 </script>
 
 <div id="map" class="w-full h-full" />
